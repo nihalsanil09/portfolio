@@ -166,6 +166,25 @@
               </ul>
             </div>
           </div>
+          
+          <div class="project-card glass" tabindex="0">
+            <div class="project-header">
+              <h3>My Pet – E-commerce Pet Shop Website</h3>
+              <span class="role">Full Stack Developer</span>
+            </div>
+            <div class="project-details">
+              <div class="tech-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+              </div>
+              <ul class="features">
+                <li>Dynamic e-commerce website for pet lovers with user/admin roles</li>
+                <li>Product categories: Dog, Cat, Birds, Fish, Rabbit, Turtle (10 products each)</li>
+                <li>User authentication, cart management, and checkout with COD/Online payment</li>
+                <li>Order history, tracking, admin panel, and email confirmations</li>
+                <li>Clean UI with dark/light mode toggle and responsive design</li>
+              </ul>
+            </div>
+          </div>
           <!-- Add more project cards as needed -->
         </div>
       </div>
@@ -207,36 +226,31 @@
             </li>
           </ul>
         </div>
-       <section id="contact" class="bg-[#f5f7fa] dark:bg-gray-900 py-20 px-4 transition-colors duration-300">
-      <div class="max-w-4xl mx-auto flex flex-col items-center justify-center">
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Let's Connect</h2>
-        <form action="https://formsubmit.co/nihalsanil0907@gmail.com" method="POST" class="w-full max-w-lg bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col gap-6">
-          <!-- Hidden Inputs for customization -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="New Contact Message from Portfolio">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://nihalsanil09.github.io/portfolio/#contact">
-          <!-- Name -->
-          <div class="relative">
-            <input type="text" id="name" name="name" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
-            <label for="name" class="floating-label dark:text-gray-300">Name</label>
-          </div>
-          <!-- Email -->
-          <div class="relative">
-            <input type="email" id="email" name="email" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
-            <label for="email" class="floating-label dark:text-gray-300">Email</label>
-          </div>
-          <!-- Message -->
-          <div class="relative">
-            <textarea id="message" name="message" required rows="4" class="peer floating-input resize-none dark:bg-gray-800 dark:text-white" placeholder=" "></textarea>
-            <label for="message" class="floating-label dark:text-gray-300">Message</label>
-          </div>
-          <button type="submit" class="w-full bg-[#00e6fe] text-white font-semibold py-3 rounded-lg shadow-lg hover:scale-105 hover:shadow-neon transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#00e6fe] focus:ring-offset-2">
-            Send Message
-          </button>
-        </form>
-      </div>
-    </section>
+        <div class="contact-form glass">
+          <h2>Let's Connect</h2>
+          <form action="https://formsubmit.co/nihalsanil0907@gmail.com" method="POST">
+            <!-- Hidden Inputs for customization -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Contact Message from Portfolio">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://nihalsanil09.github.io/portfolio/#contact">
+            <!-- Name -->
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder="Your Name" />
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder="Your Email" />
+            </div>
+            <!-- Message -->
+            <div class="form-group">
+              <textarea id="message" name="message" required rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="cta-btn">
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
     </section>
     <div class="section-spacer"></div>
@@ -256,9 +270,8 @@
   <script src="script.js"></script>
   <script>AOS.init({ once: true, duration: 800 });</script>
   <script>
-    // Dark mode toggle logic (existing)
+    // Dark mode toggle logic
     const themeToggle = document.getElementById('theme-toggle');
-    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
     const body = document.body;
     const darkClass = 'dark-mode';
     const iconMoon = '🌙';
@@ -268,13 +281,12 @@
       if (mode === 'dark') {
         body.classList.add(darkClass);
         themeToggle.textContent = iconSun;
-        if (mobileThemeToggle) mobileThemeToggle.textContent = iconSun;
       } else {
         body.classList.remove(darkClass);
         themeToggle.textContent = iconMoon;
-        if (mobileThemeToggle) mobileThemeToggle.textContent = iconMoon;
       }
     }
+    
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       applyTheme(savedTheme);
@@ -282,22 +294,13 @@
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       applyTheme(prefersDark ? 'dark' : 'light');
     }
+    
     themeToggle.addEventListener('click', () => {
       const isDark = body.classList.toggle(darkClass);
       const mode = isDark ? 'dark' : 'light';
       localStorage.setItem('theme', mode);
       themeToggle.textContent = isDark ? iconSun : iconMoon;
-      if (mobileThemeToggle) mobileThemeToggle.textContent = isDark ? iconSun : iconMoon;
     });
-    if (mobileThemeToggle) {
-      mobileThemeToggle.addEventListener('click', () => {
-        const isDark = body.classList.toggle(darkClass);
-        const mode = isDark ? 'dark' : 'light';
-        localStorage.setItem('theme', mode);
-        themeToggle.textContent = isDark ? iconSun : iconMoon;
-        mobileThemeToggle.textContent = isDark ? iconSun : iconMoon;
-      });
-    }
 
     // Hamburger menu logic
     const hamburger = document.getElementById('hamburger-toggle');
@@ -309,19 +312,24 @@
       mobileMenu.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
+    
     function closeMenuFn() {
       mobileMenu.classList.remove('open');
       document.body.style.overflow = '';
     }
+    
     hamburger.addEventListener('click', openMenu);
     closeMenu.addEventListener('click', closeMenuFn);
+    
     mobileLinks.forEach(link => {
       link.addEventListener('click', closeMenuFn);
     });
+    
     // Close menu on outside click
     mobileMenu.addEventListener('click', function(e) {
       if (e.target === mobileMenu) closeMenuFn();
     });
+    
     // Smooth scroll with offset for sticky navbar
     function scrollWithOffset(e, selector) {
       e.preventDefault();
@@ -333,11 +341,13 @@
         window.scrollTo({ top, behavior: 'smooth' });
       }
     }
+    
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', function(e) {
         scrollWithOffset(e, this.getAttribute('href'));
       });
     });
+    
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
       link.addEventListener('click', function(e) {
         scrollWithOffset(e, this.getAttribute('href'));

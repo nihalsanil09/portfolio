@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nihal M Sanil | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papmQw1Q6l6Qw1Q6l6Qw1Q6l6Qw1Q6l6Qw1Q6l6Qw1Q6l6Qw1Q6l6Qw1Q6l6Qw1Q6l6Qw1Q6l6Qw1Q6l6Qw1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+  <header class="header glass sticky">
+    <div class="navbar-content minimal-navbar">
+      <div class="navbar-left">
+        <span class="navbar-name">Nihal M Sanil</span>
+      </div>
+      <nav class="navbar-center">
+        <ul class="navbar-links">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="nihal Final.pdf" class="nav-link resume-btn-nav" target="_blank" download>Download Resume</a></li>
+        </ul>
+      </nav>
+      <div class="navbar-right">
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="theme-toggle">🌙</button>
+        <button id="hamburger-toggle" class="hamburger-toggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <button id="close-menu" class="close-menu" aria-label="Close menu">✖</button>
+      <ul>
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li><a href="nihal Final.pdf" class="mobile-nav-link resume-link" target="_blank" download><i class="fa-solid fa-download"></i> Download Resume</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero" data-aos="fade-up">
+      <div class="hero-plain-content">
+        <img src="nihal.jpg" alt="Profile" class="hero-profile-pic" />
+        <h1 class="hero-heading">Hello, I'm Nihal M Sanil</h1>
+        <p class="hero-subtext">Motivated Full Stack Developer passionate about building impactful digital solutions.</p>
+        <a href="#contact" class="cta-btn hero-cta">Let's Connect</a>
+      </div>
+    </section>
+
+    <section id="about" class="section about" data-aos="fade-up">
+      <div class="container">
+        <div class="about-card glass">
+          <h2>About Me</h2>
+          <ul class="about-list">
+            <li>BCA graduate with a strong foundation in web development and programming</li>
+            <li>Skilled in HTML, CSS, JavaScript, PHP, and MySQL</li>
+            <li>Experienced in building scalable, user-friendly applications</li>
+            <li>Passionate about impactful solutions and continuous learning</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education" data-aos="fade-up">
+      <div class="container">
+        <div class="education-card glass">
+          <h2>Education</h2>
+          <ul class="education-list">
+            <li><strong>Degree:</strong> Bachelor of Computer Applications (BCA)</li>
+            <li><strong>College:</strong> Milagres College, 2022 – 2025</li>
+            <li><strong>Achievements:</strong> [Add achievements or awards here]</li>
+            <li><strong>Relevant Coursework:</strong> [Add relevant coursework here]</li>
+            <li><strong>CGPA:</strong> [Your CGPA]</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section skills" data-aos="fade-up">
+      <div class="container">
+        <div class="skills-card glass">
+          <h2>Technical Skills</h2>
+          <div class="skills-badges">
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">SQL</span>
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">VS Code</span>
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">XAMPP</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">SDLC</span>
+            <span class="skill-badge">Responsive Web Design</span>
+            <span class="skill-badge">Basic Networking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages Known Section -->
+    <section id="languages" class="section languages" data-aos="fade-up">
+      <div class="container">
+        <div class="languages-card glass">
+          <h2>Languages I Speak</h2>
+          <div class="languages-list">
+            <div class="language-item"><span class="language-badge">English</span> <span class="language-level">(Fluent)</span></div>
+            <div class="language-item"><span class="language-badge">Hindi</span> <span class="language-level">(Fluent)</span></div>
+            <div class="language-item"><span class="language-badge">Kannada</span> <span class="language-level">(Conversational)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soft Skills Section -->
+    <section id="softskills" class="section softskills" data-aos="fade-up">
+      <div class="container">
+        <div class="softskills-card glass">
+          <h2>Soft Skills</h2>
+          <ul class="softskills-list">
+            <li><i class="fa-solid fa-comments"></i> Communication</li>
+            <li><i class="fa-solid fa-lightbulb"></i> Problem Solving</li>
+            <li><i class="fa-solid fa-people-group"></i> Team Collaboration</li>
+            <li><i class="fa-solid fa-clock"></i> Time Management</li>
+            <li><i class="fa-solid fa-paint-brush"></i> Creativity</li>
+            <li><i class="fa-solid fa-arrows-rotate"></i> Adaptability</li>
+            <li><i class="fa-solid fa-face-smile"></i> Positive Attitude</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects" data-aos="fade-up">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-list">
+          <div class="project-card glass" tabindex="0">
+            <div class="project-header">
+              <h3>Aura – Unisex Salon Management System</h3>
+              <span class="role">Full Stack Developer</span>
+            </div>
+            <div class="project-details">
+              <div class="tech-stack">
+                <span>HTML</span><span>CSS</span><span>PHP</span><span>JavaScript</span><span>MySQL</span>
+              </div>
+              <ul class="features">
+                <li>Salon management for booking & products</li>
+                <li>UI: black & yellow, real-time order updates</li>
+                <li>User registration, cart, service booking, admin panel</li>
+                <li>Notifications, inventory tracking</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Add more project cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section certificates" data-aos="fade-up">
+      <div class="container">
+        <h2>Certificates</h2>
+        <div class="cert-timeline">
+          <div class="cert-card glass">Post Graduate Diploma in Computer Application</div>
+          <div class="cert-card glass">Cybersecurity (ISC2, Udemy)</div>
+          <div class="cert-card glass">Front-End (Great Learning)</div>
+          <div class="cert-card glass">ChatGPT for Digital Marketing (Great Learning)</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+    <section id="contact" class="section contact" data-aos="fade-up">
+      <div class="container contact-container">
+        <div class="contact-info glass">
+          <h2>Contact Me</h2>
+          <ul>
+            <li>
+              <span class="contact-emoji" aria-label="Email">✉️</span>
+              <span class="contact-text">nihalsanil0907@gmail.com</span>
+            </li>
+            <li>
+              <span class="contact-emoji" aria-label="Phone">📞</span>
+              <span class="contact-text">+91 8123874549</span>
+            </li>
+            <li>
+              <span class="contact-emoji" aria-label="LinkedIn">🔗</span>
+              <a href="https://www.linkedin.com/in/nihal-sanil-263536318" class="contact-text" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+            </li>
+            <li>
+              <span class="contact-emoji" aria-label="Location">📍</span>
+              <span class="contact-text">Udupi – 576 101</span>
+            </li>
+          </ul>
+        </div>
+        <form class="contact-form glass" autocomplete="off">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <div class="section-spacer"></div>
+  </main>
+
+  <footer class="footer glass">
+    <div class="container footer-content">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/nihal-sanil-263536318" target="_blank" aria-label="LinkedIn">🔗</a>
+        <a href="mailto:nihalsanil0907@gmail.com" aria-label="Email">✉️</a>
+      </div>
+      <p>&copy; 2025 Nihal M Sanil</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <script>
+    // Dark mode toggle logic (existing)
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const body = document.body;
+    const darkClass = 'dark-mode';
+    const iconMoon = '🌙';
+    const iconSun = '🌞';
+
+    function applyTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.add(darkClass);
+        themeToggle.textContent = iconSun;
+        if (mobileThemeToggle) mobileThemeToggle.textContent = iconSun;
+      } else {
+        body.classList.remove(darkClass);
+        themeToggle.textContent = iconMoon;
+        if (mobileThemeToggle) mobileThemeToggle.textContent = iconMoon;
+      }
+    }
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      applyTheme(savedTheme);
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(prefersDark ? 'dark' : 'light');
+    }
+    themeToggle.addEventListener('click', () => {
+      const isDark = body.classList.toggle(darkClass);
+      const mode = isDark ? 'dark' : 'light';
+      localStorage.setItem('theme', mode);
+      themeToggle.textContent = isDark ? iconSun : iconMoon;
+      if (mobileThemeToggle) mobileThemeToggle.textContent = isDark ? iconSun : iconMoon;
+    });
+    if (mobileThemeToggle) {
+      mobileThemeToggle.addEventListener('click', () => {
+        const isDark = body.classList.toggle(darkClass);
+        const mode = isDark ? 'dark' : 'light';
+        localStorage.setItem('theme', mode);
+        themeToggle.textContent = isDark ? iconSun : iconMoon;
+        mobileThemeToggle.textContent = isDark ? iconSun : iconMoon;
+      });
+    }
+
+    // Hamburger menu logic
+    const hamburger = document.getElementById('hamburger-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenuFn() {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', openMenu);
+    closeMenu.addEventListener('click', closeMenuFn);
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', closeMenuFn);
+    });
+    // Close menu on outside click
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) closeMenuFn();
+    });
+    // Smooth scroll with offset for sticky navbar
+    function scrollWithOffset(e, selector) {
+      e.preventDefault();
+      const target = document.querySelector(selector);
+      if (target) {
+        const header = document.querySelector('.header');
+        const offset = header ? header.offsetHeight + 8 : 64;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        scrollWithOffset(e, this.getAttribute('href'));
+      });
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        scrollWithOffset(e, this.getAttribute('href'));
+      });
+    });
+  </script>
+</body>
+</html> 

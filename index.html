@@ -308,13 +308,32 @@
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
     function openMenu() {
-      mobileMenu.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      // Add transition class for smooth animation
+      hamburger.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      
+      // Hide hamburger first
+      hamburger.style.opacity = '0';
+      hamburger.style.transform = 'scale(0)';
+      
+      // After hamburger fades out, show menu
+      setTimeout(() => {
+        mobileMenu.classList.add('open');
+        hamburger.classList.add('menu-open');
+        document.body.style.overflow = 'hidden';
+      }, 150);
     }
     
     function closeMenuFn() {
+      // Remove menu open state
       mobileMenu.classList.remove('open');
+      hamburger.classList.remove('menu-open');
       document.body.style.overflow = '';
+      
+      // Show hamburger with smooth transition
+      setTimeout(() => {
+        hamburger.style.opacity = '1';
+        hamburger.style.transform = 'scale(1)';
+      }, 200);
     }
     
     hamburger.addEventListener('click', openMenu);

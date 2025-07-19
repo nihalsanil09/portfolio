@@ -328,13 +328,13 @@ body.dark-mode {
 }
 .contact-info {
   width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   margin-top: 0;
   box-sizing: border-box;
 }
 .contact-form {
   width: 100%;
-  margin-top: 0;
+  margin-top: 2rem;
   box-sizing: border-box;
 }
 .contact-info h2 {
@@ -400,7 +400,7 @@ body.dark-mode {
   font-size: 1rem;
   font-family: inherit;
   background: rgba(255,255,255,0.2);
-  color: var(--text-body);
+  color: #1f2937;
   transition: border 0.2s, box-shadow 0.2s;
   outline: none;
   box-shadow: none;
@@ -408,7 +408,7 @@ body.dark-mode {
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
   background: rgba(15,23,42,0.2);
-  color: var(--text-body);
+  color: #ffffff;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
@@ -496,7 +496,7 @@ body.dark-mode .contact-form textarea {
   margin-bottom: 80px;
 }
 .contact-info {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .footer {
   margin-top: 80px;
@@ -589,7 +589,7 @@ body.theme-transition, body.theme-transition * {
   font-size: 1rem;
   font-family: inherit;
   background: rgba(255,255,255,0.15);
-  color: #fff;
+  color: #1f2937;
   transition: border 0.2s, box-shadow 0.2s;
   outline: none;
   box-shadow: none;
@@ -603,7 +603,7 @@ body.theme-transition, body.theme-transition * {
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
   background: rgba(15,23,42,0.2);
-  color: #fff;
+  color: #ffffff;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {

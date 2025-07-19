@@ -1666,7 +1666,9 @@ body.dark-mode .nav-link {
   cursor: pointer;
   margin-left: 1.2rem;
   z-index: 1201;
-  transition: color 0.2s;
+  transition: color 0.2s, opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
 }
 body.dark-mode .hamburger-toggle {
   color: #fff;
@@ -1675,7 +1677,7 @@ body.dark-mode .hamburger-toggle {
   outline: 2px solid #22D3EE;
 }
 
-/* Mobile Menu Styles - Updated */
+/* Mobile Menu Styles - Updated - First Section */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -1702,16 +1704,25 @@ body.dark-mode .hamburger-toggle {
   opacity: 1;
 }
 .close-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
   background: none;
   border: none;
   font-size: 1.5rem;
   color: #1f2937;
-  align-self: flex-end;
-  margin-bottom: 2rem;
   cursor: pointer;
-  transition: color 0.2s, transform 0.2s;
+  transition: color 0.2s, transform 0.2s, opacity 0.3s ease;
   padding: 0.5rem;
   border-radius: 8px;
+  z-index: 1201;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
 }
 body.dark-mode .close-menu {
   color: #ffffff;
@@ -1763,9 +1774,35 @@ body.dark-mode .mobile-menu {
 }
 
 /* Hide hamburger when mobile menu is open */
-.mobile-menu.open ~ .header .hamburger-toggle,
-.header .mobile-menu.open ~ .hamburger-toggle {
+#mobile-menu.open ~ .header #hamburger-toggle,
+.header #mobile-menu.open ~ #hamburger-toggle,
+#mobile-menu.open ~ #hamburger-toggle,
+#hamburger-toggle.menu-open,
+#mobile-menu.open + .header #hamburger-toggle,
+#mobile-menu.open ~ #hamburger-toggle,
+#mobile-menu.open ~ .header .hamburger-toggle,
+.header .mobile-menu.open ~ .hamburger-toggle,
+.mobile-menu.open ~ .hamburger-toggle,
+.hamburger-toggle.menu-open,
+.mobile-menu.open + .header .hamburger-toggle {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  transform: scale(0) !important;
+}
+
+/* Ensure hamburger is visible when menu is closed */
+#hamburger-toggle:not(.menu-open) {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  left: auto !important;
+  transform: scale(1) !important;
 }
 
 @media (max-width: 1100px) {
@@ -2114,9 +2151,35 @@ body.dark-mode .mobile-menu {
 }
 
 /* Hide hamburger when mobile menu is open - Second Section */
-.mobile-menu.open ~ .header .hamburger-toggle,
-.header .mobile-menu.open ~ .hamburger-toggle {
+#mobile-menu.open ~ .header #hamburger-toggle,
+.header #mobile-menu.open ~ #hamburger-toggle,
+#mobile-menu.open ~ #hamburger-toggle,
+#hamburger-toggle.menu-open,
+#mobile-menu.open + .header #hamburger-toggle,
+#mobile-menu.open ~ #hamburger-toggle,
+#mobile-menu.open ~ .header .hamburger-toggle,
+.header .mobile-menu.open ~ .hamburger-toggle,
+.mobile-menu.open ~ .hamburger-toggle,
+.hamburger-toggle.menu-open,
+.mobile-menu.open + .header .hamburger-toggle {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  transform: scale(0) !important;
+}
+
+/* Ensure hamburger is visible when menu is closed - Second Section */
+#hamburger-toggle:not(.menu-open) {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  left: auto !important;
+  transform: scale(1) !important;
 }
 
 .minimal-navbar {

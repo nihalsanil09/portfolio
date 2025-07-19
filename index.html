@@ -207,12 +207,30 @@
             </li>
           </ul>
         </div>
-        <form class="contact-form glass" autocomplete="off">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="cta-btn">Send Message</button>
-        </form>
+       <section id="contact" class="bg-[#f5f7fa] dark:bg-gray-900 py-20 px-4 transition-colors duration-300">
+      <div class="max-w-4xl mx-auto flex flex-col items-center justify-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">Let's Connect</h2>
+        <form action="https://formsubmit.co/nihalsanil0907@gmail.com" method="POST" class="w-full max-w-lg bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col gap-6">
+          <!-- Hidden Inputs for customization -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Contact Message from Portfolio">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://neha05prg.github.io/Portfolio1/#contact">
+          <!-- Name -->
+          <div class="relative">
+            <input type="text" id="name" name="name" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
+            <label for="name" class="floating-label dark:text-gray-300">Name</label>
+          </div>
+          <!-- Email -->
+          <div class="relative">
+            <input type="email" id="email" name="email" required class="peer floating-input dark:bg-gray-800 dark:text-white" placeholder=" " />
+            <label for="email" class="floating-label dark:text-gray-300">Email</label>
+          </div>
+          <!-- Message -->
+          <div class="relative">
+            <textarea id="message" name="message" required rows="4" class="peer floating-input resize-none dark:bg-gray-800 dark:text-white" placeholder=" "></textarea>
+            <label for="message" class="floating-label dark:text-gray-300">Message</label>
+          </div>
       </div>
     </section>
     <div class="section-spacer"></div>
